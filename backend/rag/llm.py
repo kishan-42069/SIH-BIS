@@ -97,9 +97,16 @@ async def call_gemini(prompt: str) -> str:
 
     client = genai.Client(api_key=api_key)
 
-    preferred_model = os.getenv("GEMINI_MODEL", "gemini-2.0-flash-lite")
+    preferred_model = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
     # Valid Gemini models in preferred order (fast → capable)
-    candidate_models = [preferred_model, "gemini-2.0-flash-lite", "gemini-2.0-flash", "gemini-1.5-flash"]
+    candidate_models = [
+        preferred_model,
+        "gemini-2.5-flash",
+        "gemini-2.0-flash",
+        "gemini-1.5-flash",
+        "gemini-2.0-flash-lite",
+        "gemini-2.5-flash-lite",
+    ]
     # Deduplicate while preserving order
     models_to_try = list(dict.fromkeys(candidate_models))
 
