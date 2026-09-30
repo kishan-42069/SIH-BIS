@@ -182,9 +182,9 @@ export default function Header() {
             <img src="/bis-logo.webp" alt="BIS Logo" className="w-10 h-10 object-contain flex-shrink-0" />
             <div className="hidden sm:block">
               <div className="font-bold text-[13px] text-white leading-tight group-hover:text-white/90 transition-colors">
-                Bureau of Indian Standards
+                ManakSetu AI
               </div>
-              <div className="text-[10px] text-white/50 leading-tight">भारतीय मानक ब्यूरो</div>
+              <div className="text-[10px] text-white/50 leading-tight">मानकसेतु AI</div>
             </div>
           </Link>
 
